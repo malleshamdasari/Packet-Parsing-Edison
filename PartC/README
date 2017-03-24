@@ -1,0 +1,41 @@
+PartC README:
+-------------
+
+1. Compilation and Running:
+--------------------------
+
+	$ gcc analysis_pcap_http.c -lpcap -lm
+	$ ./a.out input.pcap file
+
+2. Output:
+----------
+
+	- The output of the program can also be seen in PartC-Output.log for
+	  8092.pcap.
+
+3. Notes:
+---------
+
+	- The tcpdump command used to capture the http traces, is:
+	
+	$tcpdump -s 0 -i any -w capture.pcap "src port 8094" or "dst port 8094"
+
+	- The HTTP request and responses are assembled together using the source
+	  and destination ports along with sequence number and acknowledgement.
+	  The HTTP headers are printed along with 4-tuple for other packets of
+	  the response.
+
+	- The 8092 capture follows HTTP/1.0 version. The version is identified
+	  using pattern of TCP flows. It is observed that, there is a unique TCP
+	  connection for each HTTP request. Hence, it is HTTP/1.0 version. Next, 
+	  the 8093 capture follows HTTP/1.1 version, because it is observed that
+ 	  there are 6 parallel connections for the entire page load. Finally, it
+	  is found that 8094 is using HTTP/2.0, which is identified with sigle 
+	  TCP connection throughout the whole page load.
+
+	- It is found that HTTP/1.0 is loading faster compared to other versions
+	  of HTTP (0.5sec). This is suspected due to the fact that the page is 
+	  very simple and the other protocols are performing worse because of
+	  encryption etc. On the other hand, HTTP/2.0 is resulting in fewer bytes
+	  (2332320 bytes) compared to other versions. This is due to reduced 
+	  number of syn, ack, fins during connection establishment etc. 

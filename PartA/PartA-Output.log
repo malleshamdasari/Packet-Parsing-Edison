@@ -1,0 +1,70 @@
+
+	Number of TCP flows			: 3
+	-------------------
+
+		***********************************
+		************* Flow 1 **************
+		***********************************
+	Transaction 0:
+		Source Seq Number		: 705669103
+		Source Ack Number		: 1921750144
+		Source Window Size		: 49152
+		Destination Seq Number		: 1921750144
+		Destination Ack Number		: 705669127
+		Destination Window Size		: 49152
+	Transaction 1:
+		Source Seq Number		: 705669127
+		Source Ack Number		: 1921750144
+		Source Window Size		: 49152
+		Destination Seq Number		: 1921750144
+		Destination Ack Number		: 705670575
+		Destination Window Size		: 49152
+	Empirical Throughput: 41.993053Mbps
+	Lossrate: 0.000430
+	RTT: 73518.041995
+	Theoretical Throughput: 7.661656Mbps
+
+		***********************************
+		************* Flow 2 **************
+		***********************************
+	Transaction 0:
+		Source Seq Number		: 3636173852
+		Source Ack Number		: 2335809728
+		Source Window Size		: 49152
+		Destination Seq Number		: 2335809728
+		Destination Ack Number		: 3636173876
+		Destination Window Size		: 49152
+	Transaction 1:
+		Source Seq Number		: 3636173876
+		Source Ack Number		: 2335809728
+		Source Window Size		: 49152
+		Destination Seq Number		: 2335809728
+		Destination Ack Number		: 3636175324
+		Destination Window Size		: 49152
+	Empirical Throughput: 10.146529Mbps
+	Lossrate: 0.013299
+	RTT: 87967.803766
+	Theoretical Throughput: 1.151340Mbps
+
+		***********************************
+		************* Flow 3 **************
+		***********************************
+	Transaction 0:
+		Source Seq Number		: 2558634630
+		Source Ack Number		: 3429921723
+		Source Window Size		: 49152
+		Destination Seq Number		: 3429921723
+		Destination Ack Number		: 2558634654
+		Destination Window Size		: 49152
+	Transaction 1:
+		Source Seq Number		: 2558634654
+		Source Ack Number		: 3429921723
+		Source Window Size		: 49152
+		Destination Seq Number		: 3429921723
+		Destination Ack Number		: 2558636102
+		Destination Window Size		: 49152
+	Empirical Throughput: 11.852050Mbps
+	Lossrate: 0.000000
+	RTT: 73273.384615
+	Theoretical Throughput: 1.151340Mbps
+

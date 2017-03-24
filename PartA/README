@@ -1,0 +1,33 @@
+PartA README:
+-------------
+
+1. Compilation and Running:
+--------------------------
+
+	$ gcc analysis_pcap_tcp.c -lpcap -lm
+	$ ./a.out input.pcap file
+
+2. Output:
+----------
+
+	- The output of the program can also be seen in PartA-Output.log
+
+3. Notes:
+---------
+
+	- The total number of flows observed in the given capture is 3.
+	- For each flow, for the first 2 transactions, the source and destinati
+	  ion sequence number, acknowledgement, window size are printed. It is 
+	  observed that acknowledgement is sum of sequence number and pay load 
+	  length of the packet. Here, for receiver window size, Window Scaling
+	  is used, and hence multiplied the window by 2^14, where 14 is scaling
+	  factor.
+	- The empirical throughput id estimated by calculating the number of b-
+	  ytes sent over the complete flow duration, for each flow.
+	- The lossrate is estimated by calculating the total number of retrans-
+	  missions over total packets.
+	- The RTT is estimated using packet sent time and acknowledgment recep-
+	  tion time. And then, using loss rate and RTT, the theoretical throug-
+	  hput is calculted. The observed theoretical throughput is not closer
+	  to empirical throughput. One reason for this is suspected is that we
+	  have very less data to efficiently predict the throughput.

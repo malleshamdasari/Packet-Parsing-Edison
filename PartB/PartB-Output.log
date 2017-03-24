@@ -1,0 +1,25 @@
+
+	Number of TCP flows		: 3
+	-------------------
+
+		***********************************
+		************* Flow 1 **************
+		***********************************
+	First 5 Congestion Window Sizes: 10	11	12	13	14	
+	Number of Retransmits due to Triple Duplicates: 2
+	Number of Retransmits due to Timeout: 1
+
+		***********************************
+		************* Flow 2 **************
+		***********************************
+	First 5 Congestion Window Sizes: 10	11	12	13	14	
+	Number of Retransmits due to Triple Duplicates: 4
+	Number of Retransmits due to Timeout: 90
+
+		***********************************
+		************* Flow 3 **************
+		***********************************
+	First 5 Congestion Window Sizes: 10	11	12	13	14	
+	Number of Retransmits due to Triple Duplicates: 0
+	Number of Retransmits due to Timeout: 0
+

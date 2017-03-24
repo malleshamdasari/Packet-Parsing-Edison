@@ -1,0 +1,28 @@
+PartB README:
+-------------
+
+1. Compilation and Running:
+--------------------------
+
+	$ gcc analysis_pcap_tcp.c -lpcap -lm
+	$ ./a.out input.pcap file
+
+2. Output:
+----------
+
+	- The output of the program can also be seen in PartB-Output.log
+
+3. Notes:
+---------
+
+	- Intial congestion window is calculated as: the total packets sent by
+	  the client before it first gets an acknowledgement from the server. 
+	  For all the flows, it was observed that the congestion window is 10
+	  intially. After that, for every acknowledgement, the congestion wind
+	  -ow is incremented by 1, until loss. If there is a loss, then conges
+ 	  -tion window is halved if it is fast retransmission otherwise it is 
+	  set to 1. 
+	- The total number of retransmits due to triple duplicates is calcula-
+	  ted using duplicated acks more than thrice. This value is subtracted
+	  from the total retransmissions to get the total retransmission due to
+   	  timeouts.
