@@ -2,7 +2,7 @@
 Parsing TCP and HTTP packets in C language using libpcap library
 
 ********************************************************************************
-*************************** FCN Assignment II README ***************************
+*************************** FCN Homework2 README ***************************
 ********************************************************************************
 
 The goal of this assignment is to get the in-depth knowledge of Http and TCP pac
